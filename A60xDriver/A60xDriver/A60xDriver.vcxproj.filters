@@ -48,22 +48,22 @@
     <ClInclude Include="iAR60xDriver.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="MotorStructure.h">
+    <ClInclude Include="Elements\MotorSettingsStructure.h">
       <Filter>Заголовочные файлы\Elements</Filter>
     </ClInclude>
-    <ClInclude Include="SensorStructure.h">
+    <ClInclude Include="Elements\MoveStructure.h">
       <Filter>Заголовочные файлы\Elements</Filter>
     </ClInclude>
-    <ClInclude Include="SettingsStructure.h">
+    <ClInclude Include="Elements\PowerSettingsStructure.h">
       <Filter>Заголовочные файлы\Elements</Filter>
     </ClInclude>
-    <ClInclude Include="MoveStructure.h">
+    <ClInclude Include="Elements\PowerStatusStructure.h">
       <Filter>Заголовочные файлы\Elements</Filter>
     </ClInclude>
-    <ClInclude Include="PowerOutStructure.h">
+    <ClInclude Include="Elements\SensorStructure.h">
       <Filter>Заголовочные файлы\Elements</Filter>
     </ClInclude>
-    <ClInclude Include="PowerInStructure.h">
+    <ClInclude Include="Elements\SettingsStructure.h">
       <Filter>Заголовочные файлы\Elements</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,22 +83,22 @@
     <ClCompile Include="iAR60xDriver.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="MotorStructure.cpp">
+    <ClCompile Include="Elements\MotorSettingsStructure.cpp">
       <Filter>Файлы исходного кода\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="SensorStructure.cpp">
+    <ClCompile Include="Elements\MoveStructure.cpp">
       <Filter>Файлы исходного кода\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="SettingsStructure.cpp">
+    <ClCompile Include="Elements\PowerSettingsStructure.cpp">
       <Filter>Файлы исходного кода\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="MoveStructure.cpp">
+    <ClCompile Include="Elements\PowerStatusStructure.cpp">
       <Filter>Файлы исходного кода\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="PowerOutStructure.cpp">
+    <ClCompile Include="Elements\SensorStructure.cpp">
       <Filter>Файлы исходного кода\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="PowerInStructure.cpp">
+    <ClCompile Include="Elements\SettingsStructure.cpp">
       <Filter>Файлы исходного кода\Elements</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SettingsStructure.h"
+#include "Elements/SettingsStructure.h"
 
 #include "iAR60xMoveControl.h"
 #include "iAR60xPowerControl.h"
@@ -14,8 +14,8 @@ public:
 	iAR60xDriver();
 	virtual ~iAR60xDriver();
 
-	virtual void setSettings(SettingsStructure settings[]) = 0;
-	virtual void getSettings(SettingsStructure settings[]) = 0;
+	virtual void setSettings(SettingsStructure settings) = 0;
+	virtual void getSettings(SettingsStructure &settings) = 0;
 
 };
 

@@ -15,6 +15,6 @@ void iAR60xStatusInformation::getSensorData(SensorStructure sensor)
 {
 }
 
-void iAR60xStatusInformation::getAngle(SensorStructure sensor)
+void iAR60xStatusInformation::getAngle(SensorStructure & sensor)
 {
 }

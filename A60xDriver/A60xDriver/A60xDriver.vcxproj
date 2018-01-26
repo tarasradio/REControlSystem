@@ -134,31 +134,31 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Elements\MotorSettingsStructure.h" />
+    <ClInclude Include="Elements\MoveStructure.h" />
+    <ClInclude Include="Elements\PowerSettingsStructure.h" />
+    <ClInclude Include="Elements\PowerStatusStructure.h" />
+    <ClInclude Include="Elements\SensorStructure.h" />
+    <ClInclude Include="Elements\SettingsStructure.h" />
     <ClInclude Include="iAR60xMotorsControl.h" />
     <ClInclude Include="iAR60xMoveControl.h" />
     <ClInclude Include="iAR60xPowerControl.h" />
     <ClInclude Include="iAR60xStatusInformation.h" />
     <ClInclude Include="iAR60xDriver.h" />
-    <ClInclude Include="MotorStructure.h" />
-    <ClInclude Include="MoveStructure.h" />
-    <ClInclude Include="PowerOutStructure.h" />
-    <ClInclude Include="PowerInStructure.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="SensorStructure.h" />
-    <ClInclude Include="SettingsStructure.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Elements\MotorSettingsStructure.cpp" />
+    <ClCompile Include="Elements\MoveStructure.cpp" />
+    <ClCompile Include="Elements\PowerSettingsStructure.cpp" />
+    <ClCompile Include="Elements\PowerStatusStructure.cpp" />
+    <ClCompile Include="Elements\SensorStructure.cpp" />
+    <ClCompile Include="Elements\SettingsStructure.cpp" />
     <ClCompile Include="iAR60xMotorsControl.cpp" />
     <ClCompile Include="iAR60xMoveControl.cpp" />
     <ClCompile Include="iAR60xPowerControl.cpp" />
     <ClCompile Include="iAR60xStatusInformation.cpp" />
     <ClCompile Include="iAR60xDriver.cpp" />
-    <ClCompile Include="MotorStructure.cpp" />
-    <ClCompile Include="MoveStructure.cpp" />
-    <ClCompile Include="PowerOutStructure.cpp" />
-    <ClCompile Include="PowerInStructure.cpp" />
-    <ClCompile Include="SensorStructure.cpp" />
-    <ClCompile Include="SettingsStructure.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="A60xDriver.rc" />

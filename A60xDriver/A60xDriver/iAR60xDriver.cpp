@@ -12,10 +12,10 @@ iAR60xDriver::~iAR60xDriver()
 {
 }
 
-void iAR60xDriver::setSettings(SettingsStructure settings[])
+void iAR60xDriver::setSettings(SettingsStructure settings)
 {
 }
 
-void iAR60xDriver::getSettings(SettingsStructure settings[])
+void iAR60xDriver::getSettings(SettingsStructure & settings)
 {
 }

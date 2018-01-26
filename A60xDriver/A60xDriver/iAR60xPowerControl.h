@@ -1,6 +1,6 @@
 #pragma once
-#include "PowerInStructure.h"
-#include "PowerOutStructure.h"
+#include "Elements/PowerSettingsStructure.h"
+#include "Elements/PowerStatusStructure.h"
 
 class iAR60xPowerControl
 {
@@ -8,7 +8,7 @@ public:
 	iAR60xPowerControl();
 	virtual ~iAR60xPowerControl();
 
-	virtual void setPowers(PowerInStructure powers[]) = 0;
-	virtual void getPowers(PowerOutStructure powers[]) = 0;
+	virtual void setPowers(PowerSettingsStructure powers) = 0;
+	virtual void getPowers(PowerStatusStructure &powers) = 0;
 };
 
