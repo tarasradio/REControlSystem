@@ -103,7 +103,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="A60xDriver.rc">
+    <ResourceCompile Include="AR60xDriver.rc">
       <Filter>Файлы ресурсов</Filter>
     </ResourceCompile>
   </ItemGroup>

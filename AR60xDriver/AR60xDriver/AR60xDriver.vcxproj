@@ -21,8 +21,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F995C12B-2238-4A0A-A282-11FA940B5B55}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>A60xDriver</RootNamespace>
+    <RootNamespace>AR60xDriver</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>AR60xDriver</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -161,7 +162,7 @@
     <ClCompile Include="Interfaces\iAR60xStatusInformation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="A60xDriver.rc" />
+    <ResourceCompile Include="AR60xDriver.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
