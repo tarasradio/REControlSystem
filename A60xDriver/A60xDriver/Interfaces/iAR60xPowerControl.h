@@ -1,6 +1,6 @@
 #pragma once
-#include "Elements/PowerSettingsStructure.h"
-#include "Elements/PowerStatusStructure.h"
+#include "../Elements/PowerSettingsStructure.h"
+#include "../Elements/PowerStatusStructure.h"
 
 class iAR60xPowerControl
 {

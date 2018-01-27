@@ -1,5 +1,5 @@
 #pragma once
-#include "Elements/SensorStructure.h"
+#include "../Elements/SensorStructure.h"
 
 class iAR60xStatusInformation
 {

@@ -140,11 +140,11 @@
     <ClInclude Include="Elements\PowerStatusStructure.h" />
     <ClInclude Include="Elements\SensorStructure.h" />
     <ClInclude Include="Elements\SettingsStructure.h" />
-    <ClInclude Include="iAR60xMotorsControl.h" />
-    <ClInclude Include="iAR60xMoveControl.h" />
-    <ClInclude Include="iAR60xPowerControl.h" />
-    <ClInclude Include="iAR60xStatusInformation.h" />
     <ClInclude Include="iAR60xDriver.h" />
+    <ClInclude Include="Interfaces\iAR60xMotorsControl.h" />
+    <ClInclude Include="Interfaces\iAR60xMoveControl.h" />
+    <ClInclude Include="Interfaces\iAR60xPowerControl.h" />
+    <ClInclude Include="Interfaces\iAR60xStatusInformation.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -154,11 +154,11 @@
     <ClCompile Include="Elements\PowerStatusStructure.cpp" />
     <ClCompile Include="Elements\SensorStructure.cpp" />
     <ClCompile Include="Elements\SettingsStructure.cpp" />
-    <ClCompile Include="iAR60xMotorsControl.cpp" />
-    <ClCompile Include="iAR60xMoveControl.cpp" />
-    <ClCompile Include="iAR60xPowerControl.cpp" />
-    <ClCompile Include="iAR60xStatusInformation.cpp" />
     <ClCompile Include="iAR60xDriver.cpp" />
+    <ClCompile Include="Interfaces\iAR60xMotorsControl.cpp" />
+    <ClCompile Include="Interfaces\iAR60xMoveControl.cpp" />
+    <ClCompile Include="Interfaces\iAR60xPowerControl.cpp" />
+    <ClCompile Include="Interfaces\iAR60xStatusInformation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="A60xDriver.rc" />

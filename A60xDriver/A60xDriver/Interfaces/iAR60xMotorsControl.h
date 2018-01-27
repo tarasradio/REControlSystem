@@ -1,5 +1,5 @@
 #pragma once
-#include "Elements/MotorSettingsStructure.h"
+#include "../Elements/MotorSettingsStructure.h"
 
 class iAR60xMotorsControl
 {

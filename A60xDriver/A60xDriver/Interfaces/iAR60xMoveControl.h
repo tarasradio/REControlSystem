@@ -1,5 +1,5 @@
 #pragma once
-#include "Elements/MoveStructure.h"
+#include "../Elements/MoveStructure.h"
 
 class iAR60xMoveControl
 {
