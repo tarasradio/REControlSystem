@@ -1,21 +1,25 @@
 #pragma once
 
-#include "Elements/SettingsStructure.h"
+#include "HardwareInterfaces\IAR60xJointControl.h"
+#include "HardwareInterfaces\IAR60xJointState.h"
+#include "HardwareInterfaces\IAR60xPowerControl.h"
+#include "HardwareInterfaces\IAR60xPowerState.h"
+#include "HardwareInterfaces\IAR60xSensorState.h"
+#include "Elements\AdditionalSettings.h"
 
-#include "Interfaces/iAR60xMoveControl.h"
-#include "Interfaces/iAR60xPowerControl.h"
-#include "Interfaces/iAR60xMotorsControl.h"
-#include "Interfaces/iAR60xStatusInformation.h"
-
-class iAR60xDriver 
-	: iAR60xMoveControl, iAR60xMotorsControl, iAR60xPowerControl, iAR60xStatusInformation
+class IAR60xDriver : 
+	IAR60xJointControl, 
+	IAR60xJointState, 
+	IAR60xPowerControl, 
+	IAR60xPowerState, 
+	IAR60xSensorState
 {
 public:
-	iAR60xDriver();
-	virtual ~iAR60xDriver();
+	IAR60xDriver();
+	virtual ~IAR60xDriver();
 
-	virtual void setSettings(SettingsStructure settings) = 0;
-	virtual void getSettings(SettingsStructure &settings) = 0;
+	virtual void setSettings(AdditionalSettings settings) = 0;
+	virtual void getSettings(AdditionalSettings &settings) = 0;
 
 };
 

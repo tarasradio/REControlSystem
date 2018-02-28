@@ -1,20 +1,20 @@
-#include "iAR60xDriver.h"
+#include "IAR60xDriver.h"
 
 
 
-iAR60xDriver::iAR60xDriver()
+IAR60xDriver::IAR60xDriver()
 {
 }
 
 
-iAR60xDriver::~iAR60xDriver()
+IAR60xDriver::~IAR60xDriver()
 {
 }
 
-void iAR60xDriver::setSettings(SettingsStructure settings)
+void IAR60xDriver::setSettings(AdditionalSettings settings)
 {
 }
 
-void iAR60xDriver::getSettings(SettingsStructure & settings)
+void IAR60xDriver::getSettings(AdditionalSettings & settings)
 {
 }

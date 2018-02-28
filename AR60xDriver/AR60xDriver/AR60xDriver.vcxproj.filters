@@ -13,17 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Заголовочные файлы\Interfaces">
-      <UniqueIdentifier>{57c13bc3-4870-4e5f-aa1f-5beea11eec64}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы исходного кода\Interfaces">
-      <UniqueIdentifier>{8e2d463f-0d7b-44e6-b193-7e37de88cb27}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Заголовочные файлы\Elements">
       <UniqueIdentifier>{dd05f0ad-e439-45dc-85e8-2c8817fa6e79}</UniqueIdentifier>
     </Filter>
     <Filter Include="Файлы исходного кода\Elements">
       <UniqueIdentifier>{34fd2754-7238-44ab-910b-68eeef5bbdb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\HardwareInterfaces">
+      <UniqueIdentifier>{57c13bc3-4870-4e5f-aa1f-5beea11eec64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\HardwareInterfaces">
+      <UniqueIdentifier>{8e2d463f-0d7b-44e6-b193-7e37de88cb27}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,73 +33,73 @@
     <ClInclude Include="resource.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="iAR60xDriver.h">
+    <ClInclude Include="HardwareInterfaces\IAR60xJointState.h">
+      <Filter>Заголовочные файлы\HardwareInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareInterfaces\IAR60xPowerControl.h">
+      <Filter>Заголовочные файлы\HardwareInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareInterfaces\IAR60xPowerState.h">
+      <Filter>Заголовочные файлы\HardwareInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareInterfaces\IAR60xSensorState.h">
+      <Filter>Заголовочные файлы\HardwareInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareInterfaces\IAR60xJointControl.h">
+      <Filter>Заголовочные файлы\HardwareInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Elements\JointSettings.h">
+      <Filter>Заголовочные файлы\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Elements\PowerSettings.h">
+      <Filter>Заголовочные файлы\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Elements\PowerState.h">
+      <Filter>Заголовочные файлы\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Elements\SensorState.h">
+      <Filter>Заголовочные файлы\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="IAR60xDriver.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Elements\MotorSettingsStructure.h">
+    <ClInclude Include="Elements\AdditionalSettings.h">
       <Filter>Заголовочные файлы\Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Elements\MoveStructure.h">
-      <Filter>Заголовочные файлы\Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Elements\PowerSettingsStructure.h">
-      <Filter>Заголовочные файлы\Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Elements\PowerStatusStructure.h">
-      <Filter>Заголовочные файлы\Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Elements\SensorStructure.h">
-      <Filter>Заголовочные файлы\Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Elements\SettingsStructure.h">
-      <Filter>Заголовочные файлы\Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Interfaces\iAR60xMotorsControl.h">
-      <Filter>Заголовочные файлы\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Interfaces\iAR60xMoveControl.h">
-      <Filter>Заголовочные файлы\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Interfaces\iAR60xPowerControl.h">
-      <Filter>Заголовочные файлы\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Interfaces\iAR60xStatusInformation.h">
-      <Filter>Заголовочные файлы\Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="iAR60xDriver.cpp">
+    <ClCompile Include="HardwareInterfaces\IAR60xJointState.cpp">
+      <Filter>Файлы исходного кода\HardwareInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareInterfaces\IAR60xPowerControl.cpp">
+      <Filter>Файлы исходного кода\HardwareInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareInterfaces\IAR60xPowerState.cpp">
+      <Filter>Файлы исходного кода\HardwareInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareInterfaces\IAR60xSensorState.cpp">
+      <Filter>Файлы исходного кода\HardwareInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareInterfaces\IAR60xJointControl.cpp">
+      <Filter>Файлы исходного кода\HardwareInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Elements\JointSettings.cpp">
+      <Filter>Файлы исходного кода\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Elements\PowerSettings.cpp">
+      <Filter>Файлы исходного кода\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Elements\PowerState.cpp">
+      <Filter>Файлы исходного кода\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Elements\SensorState.cpp">
+      <Filter>Файлы исходного кода\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="IAR60xDriver.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Elements\MotorSettingsStructure.cpp">
+    <ClCompile Include="Elements\AdditionalSettings.cpp">
       <Filter>Файлы исходного кода\Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="Elements\MoveStructure.cpp">
-      <Filter>Файлы исходного кода\Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="Elements\PowerSettingsStructure.cpp">
-      <Filter>Файлы исходного кода\Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="Elements\PowerStatusStructure.cpp">
-      <Filter>Файлы исходного кода\Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="Elements\SensorStructure.cpp">
-      <Filter>Файлы исходного кода\Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="Elements\SettingsStructure.cpp">
-      <Filter>Файлы исходного кода\Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="Interfaces\iAR60xMotorsControl.cpp">
-      <Filter>Файлы исходного кода\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="Interfaces\iAR60xMoveControl.cpp">
-      <Filter>Файлы исходного кода\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="Interfaces\iAR60xPowerControl.cpp">
-      <Filter>Файлы исходного кода\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="Interfaces\iAR60xStatusInformation.cpp">
-      <Filter>Файлы исходного кода\Interfaces</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
