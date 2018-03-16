@@ -17,24 +17,27 @@ CONFIG += qt c++14 thread
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    Logger.cpp
+    Logger.cpp \
+    ControlWidgets/PowerSupplyControlWidget.cpp
 
 HEADERS  += mainwindow.h \
-    Logger.h
+    Logger.h \
+    ControlWidgets/PowerSupplyControlWidget.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    ControlWidgets/PowerSupplyControlWidget.ui
 
 win32:
 {
-    LIBS += -L../../../BUILDS/REControlSystem/Build_AR60xHWDriver/debug/ -lAR60xHWDriver
+    LIBS += -L../../build_REControlSystem/build_AR60xHWDriver/debug/ -lAR60xHWDriver
     INCLUDEPATH += ../AR60xHWDriver/
 }
 
 unix:
 {
-    LIBS += -L../../../BUILDS/REControlSystem/Build_AR60xHWDriver/ -lAR60xHWDriver
+    LIBS += -L../build/build_AR60xHWDriver/ -lAR60xHWDriver
     INCLUDEPATH += ../AR60xHWDriver/
 }
 
-
-
+RESOURCES += \
+    icons/resicons.qrc

@@ -6,6 +6,8 @@
 #include "../REControlSystemInterfaces/ILogger.h"
 #include "Logger.h"
 
+#include "ControlWidgets/PowerSupplyControlWidget.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -29,6 +31,9 @@ private:
     Ui::MainWindow *ui;
     Logger *_logger;
     AR60xHWDriver *driver;
+    PowerSupplyControlWidget *_powerSupplyCW;
+
+    void initWidgets();
 };
 
 #endif // MAINWINDOW_H

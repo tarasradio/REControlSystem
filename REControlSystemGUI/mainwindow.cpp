@@ -32,6 +32,8 @@ MainWindow::MainWindow(QWidget *parent) :
     driver->robotConnect();
     driver->SupplySetState(PowerData::Supply12V, true);
 
+    initWidgets();
+
     int lowerLimit = driver->getRobotDesc()->getJoints()->at(1).limits.lowerLimit;
     int upperLimit = driver->getRobotDesc()->getJoints()->at(1).limits.upperLimit;
 
@@ -68,4 +70,10 @@ void MainWindow::on_ButtonOn_clicked()
 void MainWindow::on_horizontalSlider_sliderMoved(int position)
 {
     driver->JointSetPosition(1, position);
+}
+
+void MainWindow::initWidgets()
+{
+    _powerSupplyCW = new PowerSupplyControlWidget();
+    ui->PowerSupplyCWLayout->addWidget(_powerSupplyCW);
 }
