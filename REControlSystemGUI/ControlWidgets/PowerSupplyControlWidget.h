@@ -6,6 +6,7 @@
 #include <QIcon>
 #include <QTimer>
 #include "../../AR60xHWDriver/DataTypes/PowerState.h"
+#include "REControlSystemInterfaces/IPowerSupplyController.h"
 
 namespace Ui {
 class PowerSupplyControlWidget;
@@ -18,6 +19,8 @@ class PowerSupplyControlWidget : public QWidget
 public:
     explicit PowerSupplyControlWidget(QWidget *parent = 0);
     ~PowerSupplyControlWidget();
+
+    void setController(IPowerSupplyController *controller);
 
     void updateInfo(PowerState state);
 
@@ -45,6 +48,8 @@ private:
         RebootPowerUp,
         NotReboot
     };
+
+    IPowerSupplyController *_controller;
 
      void initGrid();
 };

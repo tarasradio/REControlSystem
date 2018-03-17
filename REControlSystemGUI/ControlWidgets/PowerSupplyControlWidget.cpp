@@ -8,7 +8,6 @@ PowerSupplyControlWidget::PowerSupplyControlWidget(QWidget *parent) :
     ui->setupUi(this);
 
     initGrid();
-
 }
 
 PowerSupplyControlWidget::~PowerSupplyControlWidget()
@@ -16,29 +15,25 @@ PowerSupplyControlWidget::~PowerSupplyControlWidget()
     delete ui;
 }
 
+void PowerSupplyControlWidget::setController(IPowerSupplyController *controller)
+{
+    _controller = controller;
+    updateInfo(_controller->getPowerState());
+}
+
 void PowerSupplyControlWidget::updateInfo(PowerState state)
 {
-    ui->tableWidget->item(1,1)->setText(QString::number(
-       state.power48VState.Voltage, 'f', 2));
-    ui->tableWidget->item(2,1)->setText(QString::number(
-       state.power8V2State.Voltage, 'f', 2));
-    ui->tableWidget->item(3,1)->setText(QString::number(
-       state.power8V1State.Voltage, 'f', 2));
-    ui->tableWidget->item(4,1)->setText(QString::number(
-       state.power6V2State.Voltage, 'f', 2));
-    ui->tableWidget->item(5,1)->setText(QString::number(
-       state.power6V1State.Voltage, 'f', 2));
+    ui->tableWidget->item(1,1)->setText(QString::number( state.power48VState.Voltage, 'f', 2));
+    ui->tableWidget->item(2,1)->setText(QString::number( state.power8V2State.Voltage, 'f', 2));
+    ui->tableWidget->item(3,1)->setText(QString::number( state.power8V1State.Voltage, 'f', 2));
+    ui->tableWidget->item(4,1)->setText(QString::number( state.power6V2State.Voltage, 'f', 2));
+    ui->tableWidget->item(5,1)->setText(QString::number( state.power6V1State.Voltage, 'f', 2));
 
-    ui->tableWidget->item(1,2)->setText(QString::number(
-       state.power48VState.Current, 'f', 2));
-    ui->tableWidget->item(2,2)->setText(QString::number(
-       state.power8V2State.Current, 'f', 2));
-    ui->tableWidget->item(3,2)->setText(QString::number(
-       state.power8V1State.Current, 'f', 2));
-    ui->tableWidget->item(4,2)->setText(QString::number(
-       state.power6V2State.Current, 'f', 2));
-    ui->tableWidget->item(5,2)->setText(QString::number(
-                                            state.power6V1State.Current, 'f', 2));
+    ui->tableWidget->item(1,2)->setText(QString::number( state.power48VState.Current, 'f', 2));
+    ui->tableWidget->item(2,2)->setText(QString::number( state.power8V2State.Current, 'f', 2));
+    ui->tableWidget->item(3,2)->setText(QString::number( state.power8V1State.Current, 'f', 2));
+    ui->tableWidget->item(4,2)->setText(QString::number( state.power6V2State.Current, 'f', 2));
+    ui->tableWidget->item(5,2)->setText(QString::number( state.power6V1State.Current, 'f', 2));
 }
 
 void PowerSupplyControlWidget::onSupplyButtonsClicked()

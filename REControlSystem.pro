@@ -69,7 +69,9 @@ HEADERS  += \
     REControlSystemGUI/ControlWidgets/PowerSupplyControlWidget.h \
     REControlSystemGUI/Logger.h \
     REControlSystemInterfaces/ILogger.h \
-    REControlSystemGUI/MainWindow.h
+    REControlSystemGUI/MainWindow.h \
+    REControlSystemInterfaces/IController.h \
+    REControlSystemInterfaces/IPowerSupplyController.h
 
 FORMS    += \
     REControlSystemGUI/ControlWidgets/PowerSupplyControlWidget.ui \

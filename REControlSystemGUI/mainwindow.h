@@ -8,6 +8,8 @@
 
 #include "ControlWidgets/PowerSupplyControlWidget.h"
 
+#include "REControlSystemControllers/Controllers/PowerSupplyController.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -32,6 +34,7 @@ private:
     Logger *_logger;
     AR60xHWDriver *driver;
     PowerSupplyControlWidget *_powerSupplyCW;
+    PowerSupplyController *_powerController;
 
     void initWidgets();
 };
