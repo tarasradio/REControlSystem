@@ -71,8 +71,8 @@ void PowerSupplyControlWidget::initGrid()
 
         // привязываем иконки
         QIcon my_icon;
-        my_icon.addFile(":/icons/on.png", QSize(), QIcon::Normal, QIcon::On);
-        my_icon.addFile(":/icons/off.png", QSize(), QIcon::Normal, QIcon::Off);
+        my_icon.addFile(":/icons/button/iconOn", QSize(), QIcon::Normal, QIcon::On);
+        my_icon.addFile(":/icons/button/iconOff", QSize(), QIcon::Normal, QIcon::Off);
         button->setIcon(my_icon);
 
          // задаем стиль

@@ -22,11 +22,7 @@
 #include <fstream>
 #include <sstream>
 
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QJsonParseError>
 #include <QFile>
-#include <QJsonArray>
 
 class AR60xHWDriver :
         IAR60xJointControl,
@@ -38,8 +34,6 @@ class AR60xHWDriver :
 private:
     ILogger *_logger;
     AR60xDescription * desc;
-    bool serialize(std::string fileName);
-    bool deserialize(std::string fileName);
 
     UDPConnection *connection;
     AR60xRecvPacket *recvPacket;

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons/button">
+        <file alias="iconOff">REControlSystemGUI/icons/off.png</file>
+        <file alias="iconOn">REControlSystemGUI/icons/on.png</file>
+    </qresource>
+</RCC>

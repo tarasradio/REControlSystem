@@ -5,7 +5,7 @@
 #include <QPushButton>
 #include <QIcon>
 #include <QTimer>
-#include "../AR60xHWDriver/DataTypes/PowerState.h"
+#include "../../AR60xHWDriver/DataTypes/PowerState.h"
 
 namespace Ui {
 class PowerSupplyControlWidget;
