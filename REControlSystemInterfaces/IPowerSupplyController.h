@@ -8,6 +8,8 @@ class IPowerSupplyController
 {
 public:
     virtual PowerState getPowerState() = 0;
+    virtual void setSupplyState(PowerData::PowerSupplies supply, bool onOff) = 0;
+    virtual bool getSupplyState(PowerData::PowerSupplies supply) = 0;
 };
 
 #endif // IPOWERSUPPLYCONTROLLER_H

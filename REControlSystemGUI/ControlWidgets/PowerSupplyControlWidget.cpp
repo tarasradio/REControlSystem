@@ -29,17 +29,30 @@ void PowerSupplyControlWidget::setController(IPowerSupplyController *controller)
 
 void PowerSupplyControlWidget::updateInfo(PowerState state)
 {
-    ui->tableWidget->item(1,1)->setText(QString::number( state.power48VState.Voltage, 'f', 2));
-    ui->tableWidget->item(2,1)->setText(QString::number( state.power8V2State.Voltage, 'f', 2));
-    ui->tableWidget->item(3,1)->setText(QString::number( state.power8V1State.Voltage, 'f', 2));
-    ui->tableWidget->item(4,1)->setText(QString::number( state.power6V2State.Voltage, 'f', 2));
-    ui->tableWidget->item(5,1)->setText(QString::number( state.power6V1State.Voltage, 'f', 2));
+//    QPushButton *button;
+//    button = (QPushButton*)ui->tableWidget->cellWidget(button48V, 3);
+//    button->setChecked(_controller->getSupplyState(PowerData::Supply48V));
+//    button = (QPushButton*)ui->tableWidget->cellWidget(button8V2, 3);
+//    button->setChecked(_controller->getSupplyState(PowerData::Supply8V2));
+//    button = (QPushButton*)ui->tableWidget->cellWidget(button8V1, 3);
+//    button->setChecked(_controller->getSupplyState(PowerData::Supply8V1));
+//    button = (QPushButton*)ui->tableWidget->cellWidget(button6V2, 3);
+//    button->setChecked(_controller->getSupplyState(PowerData::Supply6V2));
+//    button = (QPushButton*)ui->tableWidget->cellWidget(button6V1, 3);
+//    button->setChecked(_controller->getSupplyState(PowerData::Supply6V1));
+//    delete button;
 
-    ui->tableWidget->item(1,2)->setText(QString::number( state.power48VState.Current, 'f', 2));
-    ui->tableWidget->item(2,2)->setText(QString::number( state.power8V2State.Current, 'f', 2));
-    ui->tableWidget->item(3,2)->setText(QString::number( state.power8V1State.Current, 'f', 2));
-    ui->tableWidget->item(4,2)->setText(QString::number( state.power6V2State.Current, 'f', 2));
-    ui->tableWidget->item(5,2)->setText(QString::number( state.power6V1State.Current, 'f', 2));
+    ui->tableWidget->item(button48V, 1)->setText(QString::number( state.power48VState.Voltage, 'f', 2));
+    ui->tableWidget->item(button8V2, 1)->setText(QString::number( state.power8V2State.Voltage, 'f', 2));
+    ui->tableWidget->item(button8V1, 1)->setText(QString::number( state.power8V1State.Voltage, 'f', 2));
+    ui->tableWidget->item(button6V2, 1)->setText(QString::number( state.power6V2State.Voltage, 'f', 2));
+    ui->tableWidget->item(button6V1, 1)->setText(QString::number( state.power6V1State.Voltage, 'f', 2));
+
+    ui->tableWidget->item(button48V, 2)->setText(QString::number( state.power48VState.Current, 'f', 2));
+    ui->tableWidget->item(button8V2, 2)->setText(QString::number( state.power8V2State.Current, 'f', 2));
+    ui->tableWidget->item(button8V1, 2)->setText(QString::number( state.power8V1State.Current, 'f', 2));
+    ui->tableWidget->item(button6V2, 2)->setText(QString::number( state.power6V2State.Current, 'f', 2));
+    ui->tableWidget->item(button6V1, 2)->setText(QString::number( state.power6V1State.Current, 'f', 2));
 }
 
 void PowerSupplyControlWidget::onSupplyButtonsClicked()
@@ -49,6 +62,30 @@ void PowerSupplyControlWidget::onSupplyButtonsClicked()
     QVariant var = button->property("row");
 
     if (!var.isValid()) return;
+
+    bool isChecked = button->isChecked();
+    switch (var.toInt()) {
+    case 1:
+        _controller->setSupplyState(PowerData::Supply48V, isChecked );
+        break;
+    case 2:
+        _controller->setSupplyState(PowerData::Supply8V2, isChecked );
+        break;
+    case 3:
+        _controller->setSupplyState(PowerData::Supply8V1, isChecked );
+        break;
+    case 4:
+        _controller->setSupplyState(PowerData::Supply6V2, isChecked );
+        break;
+    case 5:
+        _controller->setSupplyState(PowerData::Supply6V1, isChecked );
+        break;
+    case 6:
+        //onAllPowerChanged( button->isChecked() );
+        break;
+    default:
+        break;
+    }
 }
 
 void PowerSupplyControlWidget::OnTimerTick()

@@ -9,8 +9,8 @@ AR60xHWDriver::AR60xHWDriver(ILogger *logger)
 
 bool AR60xHWDriver::loadConfig(std::string fileName)
 {
-    XMLSerializer *serializer = new XMLSerializer();
-    return serializer->deserialize(fileName, desc, &connectionData);
+    XMLSerializer serializer;
+    return serializer.deserialize(fileName, desc, &connectionData);
 }
 
 void AR60xHWDriver::initPackets()
@@ -157,7 +157,9 @@ PowerState::PowerSupplyState AR60xHWDriver::PowerGetSupplyState(PowerData::Power
 
 SensorState AR60xHWDriver::SensorGetState(int sensor)
 {
-    //return recvPacket->sensorGetValue(sensor);
+    SensorState state;
+    state.name = desc->sensors.at(sensor).name;
+    state.sensorValue = recvPacket->sensorGetValue(sensor);
 }
 
 AR60xDescription *AR60xHWDriver::getRobotDesc()
@@ -167,6 +169,6 @@ AR60xDescription *AR60xHWDriver::getRobotDesc()
 
 bool AR60xHWDriver::saveConfig(std::string fileName)
 {
-    XMLser = new XMLSerializer();
-    return XMLser->serialize(fileName, desc, &connectionData);
+    XMLSerializer serializer;
+    return serializer.serialize(fileName, desc, &connectionData);
 }

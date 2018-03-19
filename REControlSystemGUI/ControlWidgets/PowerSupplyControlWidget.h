@@ -49,6 +49,16 @@ private:
         NotReboot
     };
 
+    enum SupplyButtons
+    {
+        button48V = 1,
+        button8V2,
+        button8V1,
+        button6V2,
+        button6V1,
+        buttonAllSupplies
+    };
+
     IPowerSupplyController *_controller;
 
     void initGrid();
