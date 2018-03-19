@@ -77,5 +77,6 @@ void MainWindow::initWidgets()
     _powerSupplyCW = new PowerSupplyControlWidget();
     ui->PowerSupplyCWLayout->addWidget(_powerSupplyCW);
     _powerController = new PowerSupplyController();
+    _powerController->setDriver(driver);
     _powerSupplyCW->setController(_powerController);
 }

@@ -8,6 +8,12 @@ PowerSupplyControlWidget::PowerSupplyControlWidget(QWidget *parent) :
     ui->setupUi(this);
 
     initGrid();
+
+    _timer = new QTimer(this);
+    _interval = 100;
+    _timer->setInterval(_interval);
+    connect(_timer, SIGNAL(timeout()), this, SLOT( OnTimerTick() ));
+    _timer->start();
 }
 
 PowerSupplyControlWidget::~PowerSupplyControlWidget()
@@ -43,6 +49,11 @@ void PowerSupplyControlWidget::onSupplyButtonsClicked()
     QVariant var = button->property("row");
 
     if (!var.isValid()) return;
+}
+
+void PowerSupplyControlWidget::OnTimerTick()
+{
+    updateInfo(_controller->getPowerState());
 }
 
 /**

@@ -36,7 +36,7 @@ private slots:
     //void onRebootPower();
     //void stepRebootPower();
 
-    //void OnTimerTick();
+    void OnTimerTick();
 
 private:
     Ui::PowerSupplyControlWidget *ui;
@@ -51,7 +51,11 @@ private:
 
     IPowerSupplyController *_controller;
 
-     void initGrid();
+    void initGrid();
+
+    QTimer *_timer;
+    int _time;
+    int _interval;
 };
 
 #endif // POWERSUPPLYCONTROLWIDGET_H
