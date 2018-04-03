@@ -37,7 +37,9 @@ SOURCES += main.cpp \
     REControlSystemControllers/ControllersManager.cpp \
     REControlSystemGUI/ControlWidgets/PowerSupplyControlWidget.cpp \
     REControlSystemGUI/Logger.cpp \
-    REControlSystemGUI/MainWindow.cpp
+    REControlSystemGUI/MainWindow.cpp \
+    REControlSystemGUI/LogWidget.cpp \
+    REControlSystemGUI/ControlWidgets/JointControlWidget.cpp
 
 HEADERS  += \
     AR60xHWDriver/DataTypes/ConnectionData.h \
@@ -71,11 +73,15 @@ HEADERS  += \
     REControlSystemInterfaces/ILogger.h \
     REControlSystemGUI/MainWindow.h \
     REControlSystemInterfaces/IController.h \
-    REControlSystemInterfaces/IPowerSupplyController.h
+    REControlSystemInterfaces/IPowerSupplyController.h \
+    REControlSystemGUI/LogWidget.h \
+    REControlSystemGUI/ControlWidgets/JointControlWidget.h
 
 FORMS    += \
     REControlSystemGUI/ControlWidgets/PowerSupplyControlWidget.ui \
-    REControlSystemGUI/MainWindow.ui
+    REControlSystemGUI/MainWindow.ui \
+    REControlSystemGUI/LogWidget.ui \
+    REControlSystemGUI/ControlWidgets/JointControlWidget.ui
 
 RESOURCES += \
     Resurses.qrc

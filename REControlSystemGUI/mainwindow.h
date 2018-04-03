@@ -7,6 +7,8 @@
 #include "Logger.h"
 
 #include "ControlWidgets/PowerSupplyControlWidget.h"
+#include "ControlWidgets/JointControlWidget.h"
+#include "LogWidget.h"
 
 #include "REControlSystemControllers/Controllers/PowerSupplyController.h"
 
@@ -23,11 +25,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
-
-    void on_ButtonOn_clicked();
-
-    void on_horizontalSlider_sliderMoved(int position);
 
 private:
     Ui::MainWindow *ui;
@@ -35,6 +32,10 @@ private:
     AR60xHWDriver *driver;
     PowerSupplyControlWidget *_powerSupplyCW;
     PowerSupplyController *_powerController;
+
+    LogWidget * _logWidget;
+
+    JointControlWidget * _jointCW;
 
     void initWidgets();
 };

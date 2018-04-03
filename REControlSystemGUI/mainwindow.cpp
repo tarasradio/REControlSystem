@@ -34,13 +34,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     initWidgets();
 
-    int lowerLimit = driver->getRobotDesc()->getJoints()->at(1).limits.lowerLimit;
-    int upperLimit = driver->getRobotDesc()->getJoints()->at(1).limits.upperLimit;
-
-    ui->horizontalSlider->setMinimum(lowerLimit);
-    ui->horizontalSlider->setMaximum(upperLimit);
-    ui->horizontalSlider->setValue(0);
-
     qDebug() << "joint 1 prepaired for trace" << endl;
 }
 
@@ -51,32 +44,23 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    driver->JointSetPosition(1, driver->JointGetPosition(1));
-    driver->JointSetState(1, JointState::TRACE);
-    qDebug() << "joint 1 set for trace" << endl;
-}
-
-void MainWindow::on_ButtonOn_clicked()
-{
-   driver->SupplySetState(PowerData::Supply6V1, true);
-   driver->SupplySetState(PowerData::Supply6V2, true);
-   driver->SupplySetState(PowerData::Supply8V1, true);
-   driver->SupplySetState(PowerData::Supply8V2, true);
-   driver->SupplySetState(PowerData::Supply48V, true);
-}
-
-void MainWindow::on_horizontalSlider_sliderMoved(int position)
-{
-    driver->JointSetPosition(1, position);
-}
-
 void MainWindow::initWidgets()
 {
     _powerSupplyCW = new PowerSupplyControlWidget();
-    ui->PowerSupplyCWLayout->addWidget(_powerSupplyCW);
+    ui->PowerControlLayout->addWidget(_powerSupplyCW);
+
     _powerController = new PowerSupplyController();
     _powerController->setDriver(driver);
     _powerSupplyCW->setController(_powerController);
+
+    _jointCW = new JointControlWidget();
+    ui->JointControlLayout->addWidget(_jointCW);
+
+    _logWidget = new LogWidget();
+    ui->LoggerLayout->addWidget(_logWidget);
+
+    _logWidget->setLogger(_logger);
+    _logWidget->startWrite();
+
+
 }
